@@ -11,8 +11,8 @@ import {
 import GithubIcon from '../components/Icon/GithubIcon';
 import InstagramIcon from '../components/Icon/InstagramIcon';
 import LinkedInIcon from '../components/Icon/LinkedInIcon';
-import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
-import TwitterIcon from '../components/Icon/TwitterIcon';
+// import StackOverflowIcon from '../components/Icon/StackOverflowIcon';
+// import TwitterIcon from '../components/Icon/TwitterIcon';
 import heroImage from '../images/header-background.webp';
 import porfolioImage1 from '../images/portfolio/portfolio-1.jpg';
 import porfolioImage2 from '../images/portfolio/portfolio-2.jpg';
@@ -44,8 +44,8 @@ import {
  * Page meta data
  */
 export const homePageMeta: HomepageMeta = {
-  title: 'React Resume Template',
-  description: "Example site built with Tim Baker's react resume template",
+  title: 'Sergei Koshelev - Full Stack Developer',
+  description: "Sergei Koshelev's personal website",
 };
 
 /**
@@ -69,18 +69,22 @@ export type SectionId = typeof SectionId[keyof typeof SectionId];
  */
 export const heroData: Hero = {
   imageSrc: heroImage,
-  name: `I'm Tim Baker.`,
+  name: `I'm Sergei Koshelev.`,
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a Victoria based <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently working
-        at <strong className="text-stone-100">Instant Domains</strong> helping build a modern, mobile-first, domain
-        registrar and site builder.
+        I'm a <strong className="text-stone-100">Full Stack Software Engineer</strong>, currently living in Nagoya.
+        Lately, I'm spending my time writing code and listening to music in the day and making music and writing poetry
+        in the night.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        In my free time time, you can catch me training in <strong className="text-stone-100">Muay Thai</strong>,
-        plucking my <strong className="text-stone-100">banjo</strong>, or exploring beautiful{' '}
-        <strong className="text-stone-100">Vancouver Island</strong>.
+        Also in my free time, you can catch me learning <strong className="text-stone-100">languages</strong>, plucking
+        my <strong className="text-stone-100">guitar and bass</strong>, or hitting pads on my MPD226 and most
+        importantly,{' '}
+        <strong className="text-stone-100">
+          acquiring skills I don't yet posses and learning things I don't yet know
+        </strong>
+        .
       </p>
     </>
   ),
@@ -91,11 +95,11 @@ export const heroData: Hero = {
       primary: true,
       Icon: DownloadIcon,
     },
-    {
-      href: `#${SectionId.Contact}`,
-      text: 'Contact',
-      primary: false,
-    },
+    // {
+    //   href: `#${SectionId.Contact}`,
+    //   text: 'Contact',
+    //   primary: false,
+    // },
   ],
 };
 
@@ -122,27 +126,10 @@ export const aboutData: About = {
  */
 export const skills: SkillGroup[] = [
   {
-    name: 'Spoken languages',
+    name: 'Programming languages',
     skills: [
       {
-        name: 'English',
-        level: 10,
-      },
-      {
-        name: 'French',
-        level: 4,
-      },
-      {
-        name: 'Spanish',
-        level: 3,
-      },
-    ],
-  },
-  {
-    name: 'Frontend development',
-    skills: [
-      {
-        name: 'React',
+        name: 'JavaScript',
         level: 9,
       },
       {
@@ -150,7 +137,7 @@ export const skills: SkillGroup[] = [
         level: 7,
       },
       {
-        name: 'GraphQL',
+        name: 'Python',
         level: 6,
       },
     ],
@@ -160,32 +147,54 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'Node.js',
-        level: 8,
+        level: 6,
       },
       {
-        name: 'Rust',
+        name: 'Express.js',
         level: 5,
       },
       {
-        name: 'Golang',
-        level: 4,
+        name: 'PostgreSQL',
+        level: 5,
       },
     ],
   },
   {
-    name: 'Mobile development',
+    name: 'Frontend development',
     skills: [
       {
-        name: 'React Native',
-        level: 9,
+        name: 'React',
+        level: 6,
       },
       {
-        name: 'Flutter',
-        level: 4,
+        name: 'CSS',
+        level: 5,
+      },
+    ],
+  },
+  {
+    name: 'Spoken languages',
+    skills: [
+      {
+        name: 'Russian',
+        level: 10,
       },
       {
-        name: 'Swift',
-        level: 3,
+        name: 'English',
+        level: 9.5,
+      },
+      {
+        name: 'Japanese',
+        level: 6,
+      },
+    ],
+  },
+  {
+    name: 'Others',
+    skills: [
+      {
+        name: 'Ability to learn',
+        level: 10,
       },
     ],
   },
@@ -196,71 +205,74 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Project title 1',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'ONDO',
+    description:
+      'Web application and IoT device for monitoring extremes of temperature and humidity in homes, protecting loved ones and giving peace of mind to caregivers.',
+    url: 'https://ondo.onrender.com/',
     image: porfolioImage1,
   },
   {
-    title: 'Project title 2',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'taberu',
+    description:
+      'An app that allows families to review cooked food and clearly see each family member’s preferences that helps to reduce food waste and time spent buying groceries.',
+    url: 'https://taberu-apps.herokuapp.com/',
     image: porfolioImage2,
   },
   {
-    title: 'Project title 3',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
+    title: 'Appreciate',
+    description:
+      "“Man only likes to count his troubles; he doesn't calculate his happiness.” ― Fyodor Dostoevsky, Notes from Underground. Indeed, most of us don't remember small positive things that happened to us. Now we can have those stored in one place that we can access from anywhere.",
+    url: 'https://github.com/keigrey/appreciate-server',
     image: porfolioImage3,
   },
-  {
-    title: 'Project title 4',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage4,
-  },
-  {
-    title: 'Project title 5',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage5,
-  },
-  {
-    title: 'Project title 6',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage6,
-  },
-  {
-    title: 'Project title 7',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage7,
-  },
-  {
-    title: 'Project title 8',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage8,
-  },
-  {
-    title: 'Project title 9',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage9,
-  },
-  {
-    title: 'Project title 10',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage10,
-  },
-  {
-    title: 'Project title 11',
-    description: 'Give a short description of your project here.',
-    url: 'https://timbaker.me',
-    image: porfolioImage11,
-  },
+  // {
+  //   title: 'Project title 4',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage4,
+  // },
+  // {
+  //   title: 'Project title 5',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage5,
+  // },
+  // {
+  //   title: 'Project title 6',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage6,
+  // },
+  // {
+  //   title: 'Project title 7',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage7,
+  // },
+  // {
+  //   title: 'Project title 8',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage8,
+  // },
+  // {
+  //   title: 'Project title 9',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage9,
+  // },
+  // {
+  //   title: 'Project title 10',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage10,
+  // },
+  // {
+  //   title: 'Project title 11',
+  //   description: 'Give a short description of your project here.',
+  //   url: 'https://timbaker.me',
+  //   image: porfolioImage11,
+  // },
 ];
 
 /**
@@ -365,9 +377,9 @@ export const contact: ContactSection = {
  * Social items
  */
 export const socialLinks: Social[] = [
-  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/tbakerx'},
-  {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/timbakerx/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/tbakerx/'},
-  {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
+  {label: 'Github', Icon: GithubIcon, href: 'https://github.com/keigrey'},
+  // {label: 'Stack Overflow', Icon: StackOverflowIcon, href: 'https://stackoverflow.com/users/8553186/tim-baker'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/sergeikoshelev/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/keixgrey/'},
+  // {label: 'Twitter', Icon: TwitterIcon, href: 'https://twitter.com/TimBakerx'},
 ];
